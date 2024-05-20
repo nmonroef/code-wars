@@ -1,21 +1,27 @@
-const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
-  let maxdis = mpg * fuelLeft;
-  if (maxdis >= distanceToPump) {
-    return true
-  }else {
-    return false
+class Animal {
+  constructor(name) {
+    this.name = name
   }
-};
-
-function findAverage(array) {
-    let sum = 0;
-    if (array.length == 0 ) {
-      return 0;
-    }
-    for (let i = 0; i < array.length; i++) {
-      sum += array[i]
-      
-    }
-    let number = sum / array.length;
-      return number;
+  speak() {
+    console.log(`${this.name} make a sound`)
+  }
 }
+
+class dog extends Animal {
+  constructor( name, bread) {
+    super(name)
+    this.bread = bread
+  }
+}
+
+class cat extends Animal {
+  constructor(name,bread,color) {
+    super(name)
+    super(bread)
+    this.color = color
+    
+  }
+}
+
+
+let lilly = new cat("lilly","cat","blue")
