@@ -1,27 +1,28 @@
-class Animal {
+class Anamils {
   constructor(name) {
     this.name = name
   }
   speak() {
-    console.log(`${this.name} make a sound`)
+    console.log("spek")
   }
 }
 
-class dog extends Animal {
-  constructor( name, bread) {
+class dog extends Anamils {
+  constructor(name,breed,size) {
     super(name)
-    this.bread = bread
+    this.breed = breed
+    this.size = size
+  }
+  speak() {
+    console.log("speek speek")
   }
 }
 
-class cat extends Animal {
-  constructor(name,bread,color) {
+class cat extends Anamils {
+  constructor(name, breed,) {
     super(name)
-    super(bread)
-    this.color = color
-    
+    this.breed = breed
   }
 }
+ let nathan = new cat("Nathan","guy")
 
-
-let lilly = new cat("lilly","cat","blue")
